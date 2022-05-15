@@ -84,8 +84,8 @@ public class NoticeController {
 	{
 		JsonObject json_parser = new JsonParser().parse(json_data).getAsJsonObject();
 		if(json_parser.get("id").getAsString()!="") {
-	
-			notice.deleteNotice(Integer.parseInt(json_parser.get("id").getAsString()));
+//	       System.out.println(json_parser.get("id").getAsString());		
+	       notice.deleteNotice(Integer.parseInt(json_parser.get("id").getAsString()));
 			
 			JSONObject output = new JSONObject();
 			output.put("success", notice.getRes());
